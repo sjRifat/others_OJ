@@ -1,0 +1,11 @@
+class Solution {
+public:
+    double angleClock(int hh, int mm) {
+        double h=(double)hh;
+        double m=(double)mm;
+        h=h*5+m/12;
+        double x=fabs(h-m);
+        x=min(x,60-x);
+        return x*6;
+    }
+};
